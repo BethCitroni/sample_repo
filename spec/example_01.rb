@@ -1,2 +1,2 @@
-brain = {}
-brain[:dream => "unicorn"]
+def msg
+  dog = a
