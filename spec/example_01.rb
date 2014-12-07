@@ -1,0 +1,2 @@
+def msg
+  dog = a

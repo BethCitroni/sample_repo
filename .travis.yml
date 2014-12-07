@@ -1,0 +1,6 @@
+language: ruby
+rvm:
+  - 2.1.2
+gemfile:
+  - spec/Gemfile
+script: "./spec/run-tests.sh"
