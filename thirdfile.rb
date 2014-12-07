@@ -1,3 +1,0 @@
-THIRD = "hi"
-
-puts THIRD
