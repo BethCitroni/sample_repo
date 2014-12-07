@@ -3,5 +3,8 @@ rvm:
   - 2.1.2
 before_script:
   - "gem install rubocop"
-  - "npm install -g jshint csslint htmllint"
-script: "./.linter/run_tests.sh"
+  - "npm install -g jshint"
+  - "npm install -g csslint"
+  - "npm install -g csscomb"
+  - "npm install -g htmllint"
+script: "./.linter/run_tests.rb"

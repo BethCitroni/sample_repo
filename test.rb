@@ -1,4 +1,4 @@
 def greet()
   return "Hi!"
 
-greet
+greets
