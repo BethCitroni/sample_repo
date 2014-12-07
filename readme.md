@@ -1,1 +1,0 @@
-Sample Repo with Rubcop
