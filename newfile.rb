@@ -1,0 +1,2 @@
+def greet
+  puts a
