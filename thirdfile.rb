@@ -1,1 +1,3 @@
-third edit
+THIRD = "hi"
+
+puts THIRD

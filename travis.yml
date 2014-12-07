@@ -1,0 +1,10 @@
+language: ruby
+rvm:
+  - 2.1.2
+env:
+  - DB=mongodb
+  - DB=redis
+  - DB=mysql
+gemfile:
+  - spec/Gemfile
+script: "./spec/run-tests.sh"
