@@ -5,4 +5,4 @@ gemfile:
   - spec/Gemfile
 before_script:
   - "npm install -g jshint"
-script: "./spec/run-tests.sh"
+script: "./spec/run_tests.sh"
