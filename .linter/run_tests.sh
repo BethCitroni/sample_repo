@@ -12,7 +12,7 @@ for file in $(git diff --name-only HEAD~1); do
 
     if [ ${file: -4} == ".css" ]; then
       csslint $file
-      csscomb -lv $file
+      csscomb -c .linter/.csscomb.json -lv $file
     fi
 
     if [ ${file: -5} == ".html" ]; then
