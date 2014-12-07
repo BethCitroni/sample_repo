@@ -1,12 +1,12 @@
 #!/usr/bin/env ruby
 require "English"
+require 'pry'
 
 # Get diffed files
 git_diff = `git diff --name-only HEAD~1`
 
 # Ignore deleted or renamed
-edited_files = git_diff.each_line.map(&:chomp).select! { |file| File.exists?(file) } || []
-
+edited_files = git_diff.each_line.map(&:chomp).select { |file| File.exists?(file) } || []
 
 edited_files.map! do |file|
   case File.extname(file)
