@@ -7,4 +7,4 @@ before_script:
   - "npm install -g csslint"
   - "npm install -g csscomb"
   - "npm install -g htmllint"
-script: "./.linter/run_tests.rb"
+script: ".linter/run_tests.rb"
