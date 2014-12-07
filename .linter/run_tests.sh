@@ -3,11 +3,11 @@ for file in $(git diff --name-only HEAD~1); do
   if [ -a $file ]; then
 
     if [ ${file: -3} == ".rb" ]; then
-      rubocop $file
+      rubocop --config .linter/.rubocop.yml $file
     fi
 
     if [ ${file: -3} == ".js" ]; then
-      jshint $file --config .linter/.jshint --exclude-path .linter/.jshintignore
+      jshint --config=.linter/.jshint $file
     fi
 
     if [ ${file: -4} == ".css" ]; then
