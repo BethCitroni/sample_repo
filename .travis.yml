@@ -1,8 +1,7 @@
 language: ruby
 rvm:
   - 2.1.2
-gemfile:
-  - spec/Gemfile
 before_script:
-  - "npm install -g jshint"
-script: "./spec/run_tests.sh"
+  - "gem install rubocop"
+  - "npm install -g jshint csslint htmllint"
+script: "./.linter/run_tests.sh"

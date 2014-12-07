@@ -1,0 +1,15 @@
+{
+    "attr-quote-style": "double",
+    "attr-no-dup": true,
+    "attr-req-value": true,
+    "doctype-first": true,
+    "id-no-dup": true,
+    "indent-style": "spaces",
+    "indent-width": 2,
+    "tag-bans": [
+      "blink",
+      "center",
+      "font"
+    ],
+    "tag-name-lowercase": true
+}

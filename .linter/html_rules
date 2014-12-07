@@ -1,0 +1,122 @@
+Valid option values are listed in bullet points, or explicitly specified. If no values are specified, then the option is boolean and has only the valid values true and false. If no default is specified, the default value is true.
+
+The value false is valid for any option. If used, that option does not provide restrictions on the html input.
+
+The following values may be used for format specifiers. A format specifier is a requirement on the form of a string.
+
+"lowercase": All letters are lowercase.
+"underscore": Lowercase and underscore-separated.
+"dash": Lowercase and separated by hyphens.
+"camel": camelCase (or CamelCase).
+attr-bans
+
+The value of this option is a list of strings, each of which is an attribute name. Attributes with any of the given names are disallowed.
+
+attr-name-style
+
+A format specifier, or false. If set, attribute names must conform to the given format.
+
+attr-no-dup
+
+If set, the same attribute name cannot be repeated within a single tag.
+
+attr-no-unsafe-char
+
+If set, unsafe characters may not be used in attribute values. The unsafe characters are those whose unicode values lie in the ranges 0000-001f, 007f-009f, 00ad, 0600-0604, 070f, 17b4, 17b5, 200c-200f, 2028-202f, 2060-206f, feff, fff0-ffff.
+
+attr-quote-style
+
+"double": Attribute values must be quoted using double quotes.
+"single": Attribute values must be quoted using single quotes.
+"quoted": Attribute values must be quoted.
+false: No restriction.
+attr-req-value
+
+If set, attribute values cannot be empty. This does not disallow the value "".
+
+doctype-first
+
+If set, the doctype (<!DOCTYPE ... >) must be the first element in the file.
+
+doctype-html5
+
+If set, the doctype element must specify html5.
+
+href-style
+
+"absolute": All href tags must use absolute URLs.
+"relative": All href tags must use relative URLs.
+false: No restriction.
+html-req-lang
+
+Whether or not html attributes should have a lang attribute.
+
+Values: true, false
+
+This is considered a best practice by the California State University: San Bernardino.
+
+id-class-no-ad
+
+If set, the values for the id and class attributes may not use the word "ad". This rule only restricts cases of the substring "ad" surrounded by non-alphanumeric characters.
+
+id-class-style
+
+A format specifier, or false. If set, ids and classes must fit the given format.
+
+id-no-dup
+
+If set, values for the id attribute may not be duplicated across elements.
+
+img-req-alt
+
+If set, the alt property must be set for img tags.
+
+img-req-src
+
+If set, a source must be given for each img tag.
+
+indent-style
+
+"tabs": Only tabs may be used for indentation.
+"spaces": Only spaces may be used for indentation.
+"nonmixed": Either tabs or spaces may be used, but not both in the same file.
+false: No restriction.
+indent-width
+
+(Currently unimplemented)
+
+The value of this option is either false or a positive integer. If it is a number and spaces are used for indentation, then the number of spaces must be a multiple of that number.
+
+label-req-for
+
+Including a for attribute on label tags has the following benefits:
+
+improves accessibility by helping out screen readers
+improves form element selection by allowing the user to give focus to an input by clicking on the label
+Further Reading
+
+MDN: label element
+MDN: How to structure an HTML form
+line-end-style
+
+Line endings must conform to the given style.
+
+"lf": Unix style, ending in LF.
+"crlf": Windows style, ending in CRLF.
+"cr": Ending in CR.
+false: No restriction.
+spec-char-escape
+
+If set, special characters in text and attributes (e.g. >) must be escaped.
+
+tag-bans
+
+The value of this option is a list of strings, each of which is a tag name. Tags with any of the given names are disallowed.
+
+tag-name-lowercase
+
+If set, tag names must be lowercase. Only the opening tag is checked; mismatches between open and close tags are checked by tag-name-match.
+
+tag-self-close
+
+If set, void elements must be self-closed with /, as defined in html4. The void elements are area, base, br, col, embed, hr, img, input, keygen, link, menuitem, meta, param, source, track, and wbr.

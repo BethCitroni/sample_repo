@@ -1,0 +1,3 @@
+--exclude-list=normalize.css,reset.css,vendor/,bower_components/
+--warnings=overqualified-elements,empty-rules,font-faces,zero-units
+--errors=known-properties,
