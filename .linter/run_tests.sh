@@ -11,7 +11,7 @@ for file in $(git diff --name-only HEAD~1); do
     fi
 
     if [ ${file: -4} == ".css" ]; then
-      csslint $file
+      # csslint $file
       csscomb -c .linter/.csscomb.json -lv $file
     fi
 
