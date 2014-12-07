@@ -1,6 +1,5 @@
 #!/usr/bin/env ruby
 require "English"
-require 'pry'
 
 # Get diffed files
 git_diff = `git diff --name-only HEAD~1`
