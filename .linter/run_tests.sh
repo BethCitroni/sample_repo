@@ -7,11 +7,12 @@ for file in $(git diff --name-only HEAD~1); do
     fi
 
     if [ ${file: -3} == ".js" ]; then
-      jshint $file
+      jshint $file --config .linter/.jshint --exclude-path .linter/.jshintignore
     fi
 
     if [ ${file: -4} == ".css" ]; then
       csslint $file
+      csscomb -lv $file
     fi
 
     if [ ${file: -5} == ".html" ]; then
