@@ -31,7 +31,9 @@ edited_files.map! do |file|
   { name: name, message: message, success: success }
 end
 
-$stdout.puts ENV.keys
+ENV.each do |key, val|
+  $stdout.puts("#{key} : #{val}")
+end
 
 if edited_files.select { |result| !result[:success] }.any?
   $stdout.puts("Errors: #{edited_files.count { |result| !result[:success] }}")
