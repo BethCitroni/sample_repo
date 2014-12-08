@@ -7,9 +7,7 @@ git_diffs = `git diff --name-only HEAD~1`.each_line.map(&:chomp)
 # Ignore deleted or renamed
 edited_files = git_diffs.select { |file| File.exist?(file) } || []
 
-results = []
-
-edited_files.each do |file|
+results = edited_files.map do |file|
   msg = case File.extname(file)
         when '.rb'
           `rubocop ${file} --config .linter/.rubocop.yml`
@@ -26,8 +24,13 @@ edited_files.each do |file|
         else
           'ok'
         end
-  results.push( $CHILD_STATUS.success? )
   $stdout.puts(msg)
+  $CHILD_STATUS.success?
 end
 
-exit(1) if results.include? false
+if results.include? false
+  $stdout.puts("#{results.count(&:!)} error(s)")
+  exit 1
+end
+
+
