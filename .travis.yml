@@ -11,7 +11,6 @@ script: "./.linter/run_tests.rb"
 notifications:
   hipchat:
     rooms:
-      - 94f92ca23f75a2b38fa38ed847a221@Tinkerers
+      - secure: "elW4Lz1aT0A5QUp/5LE2vqqnyvuPw+q59+nOUuvwmjC4KG8PURvwahWsaMTr3XfKaIR9pKPRrtUCcEAnFVB7tpjYEC8G0ZdUQqRcuFSbeJP9LqA/2jkioM8rbZXn8SL49CgB1TRRKRW3NZ0rJgkh+8+QfGAnnP30n4zIkEVMbZo="
     template:
       - '%{repository}#%{build_number} (%{branch} - %{commit} : %{author}): %{message}'
-    notify: true
