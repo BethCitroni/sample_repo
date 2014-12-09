@@ -1,6 +1,5 @@
 ruby: 2.1.1
 install:
-  - "gem install rubocop"
   - "npm install -g jshint"
   - "npm install -g csslint"
   - "npm install -g csscomb"
