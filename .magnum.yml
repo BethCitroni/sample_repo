@@ -1,6 +1,7 @@
 ruby: 2.0.0
 node_js: 0.1.0
 install:
+  - npm install
   - "npm install -g jshint"
   - "npm install -g csslint"
   - "npm install -g csscomb"
